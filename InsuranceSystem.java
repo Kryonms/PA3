@@ -6,7 +6,11 @@
  *
  * PROGRAM PURPOSE:  ??
  */
-import java.util.Scanner;   //S
+
+import java.util.Scanner;   //imports the scanner class for capturing user input
+import java.util.Calendar;  //imports the Calendar class for displaying current date/time
+import java.util.ArrayList; //imports the arraylist class 
+import java.io.*;           //imports all classes under java.io for IO exceptions, file, and printwriter
 //import calendar, arraylist, file, printwriter, ioexception
 
 public class InsuranceSystem
@@ -19,6 +23,13 @@ public class InsuranceSystem
   //String fileName; 
   //char cont; 
   //char correct; 
+  private EarthquakeInsurance claims = new EarthquakeInsurance(); //MAY NOT WORK
+  private Scanner input = new Scanner(System.in);
+  private Calendar dateTime = Calendar.getInstance();
+  private ArrayList<String> claimsReport= new ArrayList<String>();
+  private String filename = "";
+  private char cont = ' ';
+  private char correct = ' ';
   
   public InsuranceSystem()
   {
@@ -31,7 +42,22 @@ public class InsuranceSystem
   
   public static void processClaims()
   {
-    //uh ??
+    int size = 0;
+    int j = 0;
+    int k = 0;
+    
+    String suffix = "";
+    String aClaim = "";
+    
+    processClaims();
+    String record = "";
+    PrintWriter outputFile = new PrintWriter("File");
+    
+    outputFile.close();
+    
+    //checkInputFile();
+    
+    
   }
   
   public static void writeClaimsRecords(String[] args) 
@@ -50,3 +76,4 @@ public class InsuranceSystem
   }
   
 }
+
